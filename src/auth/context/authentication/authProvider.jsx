@@ -7,7 +7,7 @@ import {
 } from "../../reducers/authReducer";
 
 const AuthProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(authReducer, {}, initAuthReducer);
+  const [auth, dispatch] = useReducer(authReducer, {}, initAuthReducer);
 
   const login = async () => {
     try {
@@ -40,7 +40,7 @@ const AuthProvider = ({ children }) => {
   return (
     <AuthContext.Provider
       value={{
-        state,
+        auth,
         login,
         logout,
       }}
