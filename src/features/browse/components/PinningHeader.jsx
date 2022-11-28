@@ -1,9 +1,26 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const PinningHeader = () => {
+  const [show, setShow] = useState(false);
+
+  const handleFunc = () => {
+    (window.scrollY > 80) ? setShow(true) : setShow(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => handleFunc());
+    return () => {
+      window.removeEventListener("scroll", handleFunc());
+    };
+  }, []);
   return (
     <div className="h-[70px] w-full">
-      <div className="top-0 fixed bg-background-dark left-0 z-[1] w-full">
+      <div
+        className={`top-0  left-0 z-[1] w-full ease-in-out transition-all duration-700 ${
+          show ? "fixed bg-background-dark" : "relative bg-transparent"
+        }`}
+      >
         <div className="h-[68px] z-[2] bg-gradient-to-b from-[rgba(0,0,0,.7)] to-transparent text-sm flex items-center w-full py-0 px-[4%] ">
           <span className="mr-[25px] text-2xl fill-primary leading-normal">
             <Link to="/browse">
