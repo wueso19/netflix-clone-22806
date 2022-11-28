@@ -4,6 +4,6 @@ import AuthContext from "../auth/context/authentication/AuthContext";
 
 const PublicRoutes = ({ children }) => {
   const { auth } = useContext(AuthContext);
-  return auth.isAuth ? <Navigate to="/browser" /> : children;
+  return auth.isAuth ? <Navigate to="/browse" /> : children;
 };
 export default PublicRoutes;

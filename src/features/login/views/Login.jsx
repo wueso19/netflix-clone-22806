@@ -1,7 +1,7 @@
 import backgroundLogin from "../assets/background-login.jpg";
-import websiteSmall from "../assets/website_small.jpg";
-import websiteMedium from "../assets/website_medium.jpg";
-import websiteLarge from "../assets/website_large.jpg";
+// import websiteSmall from "../assets/website_small.jpg";
+// import websiteMedium from "../assets/website_medium.jpg";
+// import websiteLarge from "../assets/website_large.jpg";
 import Header from "../components/header/Header";
 import LoginForm from "../components/loginForm/LoginForm";
 
