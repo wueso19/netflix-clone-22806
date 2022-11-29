@@ -5,7 +5,7 @@ const PinningHeader = () => {
   const [show, setShow] = useState(false);
 
   const handleFunc = () => {
-    (window.scrollY > 80) ? setShow(true) : setShow(false);
+    window.scrollY > 80 ? setShow(true) : setShow(false);
   };
 
   useEffect(() => {
